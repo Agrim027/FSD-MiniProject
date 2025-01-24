@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        div {
+            margin-top: 20px;
+        }
+        table {
+            background-color: rgb(180, 110, 19);
+        }
+        table caption {
+            padding: 20px;
+            color: white;
+        }
+        label {
+            font-weight: bold;
+        }
+        .input {
+            width: 300px;
+            padding: 10px;
+        }
+        .btn {
+            padding: 5px 20px;
+            margin: 0px 5px;
+            border-radius: 5px;
+        }
+        .hero{
+    display: flex;
+}
+.hero .left{
+    background: #2c1e1e;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.hero .right{
+    background: #7c573c;
+}
+.hero .hero_split{
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left .content{
+    color: white;
+}
+.content h1{
+    font-size: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .07rem wheat;
+    letter-spacing: .1rem;
+    font-family: cursive;
+}
+.content p{
+    color: #8d7c7c;
+    font-size: 1.3rem;
+    max-width: 75%;
+    margin: 1.5rem 0;
+    line-height: 2remrem;
+}
+.content button{
+    background: radial-gradient(at top left, #5a4740, #2c1e1e);
+    padding: 1rem 3rem;
+    border: .2rem solid rgba(255, 255, 255, 0.286);
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 4rem;
+    letter-spacing: .1rem;
+}
+.content button:hover{
+    background: radial-gradient(at bottom right, #5a4740, #2c1e1e);
+}
+
+.middle{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero_split left">
+            <div class="content">
+            </div>
+        </div>
+        <div class="middle">
+            <div>
+                <form action="/submit" method="post">
+                    <table width="auto" border="0" align="center" cellspacing="10px" cellpadding="10px">
+                        <caption><strong><h1>Registration Page</h1></strong></caption>
+                        <tr>
+                            <td><label>User Name:</label></td>
+                            <td></td>
+                            <td><input type="text" name="username" placeholder="Enter User Name" class="input" required /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Password:</label></td>
+                            <td></td>
+                            <td><input type="password" name="password" placeholder="Enter Password" class="input" required /></td>
+                        </tr>
+                        <tr>
+                            <td><label>E-mail Id:</label></td>
+                            <td></td>
+                            <td><input type="email" name="email" placeholder="Enter E-mail id" class="input" required /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Phone No.:</label></td>
+                            <td></td>
+                            <td><input type="text" name="phone" placeholder="Enter Phone No" class="input" required /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Gender:</label></td>
+                            <td></td>
+                            <td>
+                                <input type="radio" name="gender" value="Male" checked />Male
+                                <input type="radio" name="gender" value="Female" />Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Date of Birth:</label></td>
+                            <td></td>
+                            <td><input type="date" name="dob" class="input" required /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Languages Known:</label></td>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" name="languages" value="English" checked>English
+                                <input type="checkbox" name="languages" value="Telugu">Telugu
+                                <input type="checkbox" name="languages" value="Hindi">Hindi
+                                <input type="checkbox" name="languages" value="Tamil">Tamil
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Address:</label></td>
+                            <td></td>
+                            <td>
+                                <textarea name="address" rows="10" class="input" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="submit" class="btn">
+                                <input type="reset" class="btn">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="hero_split right"></div>
+    </section>
+</body>
+</html>

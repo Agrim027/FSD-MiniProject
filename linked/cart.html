@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Page</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0px; padding: 0px; box-sizing: border-box;
+    }
+    .logo img{
+            height: 4rem;
+    }
+    .navbar{
+            display: flex;
+            align-items: center;
+            width: 90%;
+            height: 12vh;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+    h1 {
+        color: hsl(0, 100%, 82%);
+        text-align: center;
+        margin-bottom: 40px;
+
+    }
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        max-width: 100%;
+        margin: 10 auto;
+    }
+    li {
+        background: #fff;
+        margin: 10px 0;
+        padding: 25px 25px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    button {
+        background-color: #ff5a5a;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: left;
+        justify-items: end;
+    }
+    button:hover {
+        background-color: #ff0000;
+    }
+
+    .hero{
+    display: flex;
+    }
+    .hero .left{
+    background: #2c1e1e;
+    padding-left: 3rem;
+    }
+    .hero .right{
+    background: #7c573c;
+    }
+    .hero .hero_split{
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    }
+    .left .content{
+    color: white;
+    }
+    .content h1{
+    font-size: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .07rem wheat;
+    letter-spacing: .1rem;
+    font-family: cursive;
+    }
+    .content p{
+    color: #8d7c7c;
+    font-size: 1.3rem;
+    max-width: 75%;
+    margin: 1.5rem 0;
+    line-height: 2rem;
+    }
+    .content button{
+    background: radial-gradient(at top left, #5a4740, #2c1e1e);
+    padding: 1rem 3rem;
+    border: .2rem solid rgba(255, 255, 255, 0.286);
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 4rem;
+    letter-spacing: .1rem;
+    }
+    .content button:hover{
+    background: radial-gradient(at bottom right, #5a4740, #2c1e1e);
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footerdiv{
+    background-color: black;
+}
+.footerdiv p{
+    color: #f0f0f0;
+}
+</style>
+<body><div class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+</div>
+
+<section class="hero">
+    <div class="hero_split left">
+        <div class="content">
+        </div>
+
+    </div>
+    <div class="middle">
+        <div>
+
+
+    <h1>Cart Page</h1>
+    <ul id="cartItems"></ul>
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                let li = document.createElement('li');
+                li.textContent = item;
+                let removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => removeFromCart(index);
+                li.appendChild(removeButton);
+                cartItems.appendChild(li);
+            });
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        window.onload = loadCart;
+    </script>
+
+    
+</div>
+</div>
+        <div class="hero_split right">
+</div>
+    </section>
+
+    <footer>
+        <div class="footerdiv">
+            <br>
+            <h3 style="text-align: center; color:rgb(126, 174, 216)">Made By Agrim Gupta</h3>
+            <br><br>
+            <p style="text-align: end;">LinkedIn:-<a style="color: rgb(212, 179, 179);" href="https://www.linkedin.com/in/gupta-agrim/">Agrimg8@gmail.com</a></p>
+ 
+        </div>
+    </footer>
+</body>
+</html>

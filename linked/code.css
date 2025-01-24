@@ -1,0 +1,170 @@
+*{
+padding: 0px;
+margin: 0px;
+text-decoration: none;
+}
+body{
+    background: url(BG.png) 0px 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100hv;
+}
+
+a{
+
+    color: white;
+
+}
+
+@keyframes typewriter {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typewriter {
+
+    overflow: hidden;
+    border-right: .1rem solid orange; /* Adjust the color as needed */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15rem;
+    animation:
+    typewriter 4s steps(10, end) infinite,
+    blink .70s step-end infinite;
+
+}
+
+#text2{
+    font-size: medium;
+
+text-align: center;
+
+    font-weight: bold;
+
+    color: rgb(209, 61, 61);
+
+} 
+
+#head1{
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    color: rgb(223, 158, 60);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+#logo1{
+    height: 180px;
+   
+    }
+#logo1:hover{
+    transition-duration: 4s;
+    transform: rotateZ(360deg);
+    
+}    
+
+#text1:hover{
+   color: aqua;
+   transition-duration: 3s;
+   
+  
+}    
+#text1{
+        align-items: center;
+        font-size: xx-large;
+        padding-top: 30px;
+        font-weight: bolder;
+        font-size: 60px;
+    }
+.div2{
+    height: 40px;
+    width: 100%;
+    background-color: brown;
+     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: rgb(255, 250, 244);
+    align-items: center;
+}
+.navtext:hover{
+    background-color: rgb(177, 207, 207,0.2);
+    color: antiquewhite;
+    border: 1px solid rgb(253, 247, 247,0.3);
+}
+.div3{
+    height: 335px;
+    background-color: rgb(209, 167, 112,2.1);
+}
+#div3{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+#coffee{
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+}
+button{
+    background-color: coral;
+    color: rgb(253, 253, 253);
+    font-weight: 400;
+    border-radius: 50px;
+    width: 100px;
+    height: 30px;
+    
+}
+button:hover{
+    background-color: brown;
+    transition-duration: 1s;
+}
+
+.footerdiv{
+    height: 100px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cdiv:hover{
+    box-shadow: 20px 4px 23px 2px rgb(219, 118, 35) ;
+    box-sizing: content-box;
+    transform: translateY(6px);
+    transition-duration: 0.4s;
+}
+.imgh:hover{
+    box-shadow: 10px 4px 19px 2px rgb(128, 67, 56) ;
+    box-sizing: content-box;
+    transform: translateY(6px);
+    transition-duration: 0.3s;
+
+}
+p{
+    font-weight: bolder;
+}
+.divr{
+    margin: 10px;
+    border-radius: 30px;
+}
+.cart{
+    text-align: center;
+}
+.gocart{
+    background-color: rgb(32, 94, 230);
+    height: 50px;
+}
+.gocart:hover{
+    background-color: rgb(78, 209, 121);
+    transition-duration: 10s;
+    transform: rotateZ(72000deg);
+}
